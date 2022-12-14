@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="RobotModel3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0046437 -0.0878 -0.0086142"
+        rpy="0 0 0" />
+      <mass
+        value="0.24034" />
+      <inertia
+        ixx="0.00014847"
+        ixy="-3.2844E-21"
+        ixz="5.9288E-10"
+        iyy="0.00023298"
+        iyz="1.2393E-06"
+        izz="0.00012686" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_right_axis">
+    <inertial>
+      <origin
+        xyz="6.9855E-09 0.012857 9.7028E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.0027556" />
+      <inertia
+        ixx="2.1023E-07"
+        ixy="-2.8117E-13"
+        ixz="-1.3895E-15"
+        iyy="4.6607E-08"
+        iyz="-3.8723E-14"
+        izz="2.0857E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/front_right_axis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.81961 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/front_right_axis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_axis_joint"
+    type="revolute">
+    <origin
+      xyz="-0.074639 -0.085 -0.0251"
+      rpy="-1.5708 1.5657 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_axis" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-30"
+      upper="30"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="-2.7756E-17 3.4694E-17 0.0075"
+        rpy="0 0 0" />
+      <mass
+        value="0.028027" />
+      <inertia
+        ixx="5.1167E-06"
+        ixy="-4.2352E-22"
+        ixz="-6.2865E-22"
+        iyy="5.1167E-06"
+        iyz="6.8463E-22"
+        izz="9.1823E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.0200000000000002 0"
+      rpy="-1.5707963267949 0.957928750927918 3.14159265358979" />
+    <parent
+      link="front_right_axis" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="front_left_axis">
+    <inertial>
+      <origin
+        xyz="7.001E-09 0.012857 9.6898E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.0027556" />
+      <inertia
+        ixx="2.1023E-07"
+        ixy="-2.8153E-13"
+        ixz="-1.4543E-15"
+        iyy="4.6607E-08"
+        iyz="-3.8687E-14"
+        izz="2.0857E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/front_left_axis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.81961 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/front_left_axis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_axis_joint"
+    type="revolute">
+    <origin
+      xyz="0.06536 -0.085 -0.025237"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_axis" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-30"
+      upper="30"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="1.3878E-17 3.4694E-18 -0.0075"
+        rpy="0 0 0" />
+      <mass
+        value="0.028027" />
+      <inertia
+        ixx="5.1167E-06"
+        ixy="4.2352E-22"
+        ixz="1.1346E-22"
+        iyy="5.1167E-06"
+        iyz="6.1968E-22"
+        izz="9.1823E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/front_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.00499999999999998 0"
+      rpy="1.5707963267949 1.35583851733874 0" />
+    <parent
+      link="front_left_axis" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="back_right_axis">
+    <inertial>
+      <origin
+        xyz="0.00017115 0.012858 1.0002E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0027556" />
+      <inertia
+        ixx="2.102E-07"
+        ixy="1.9119E-09"
+        ixz="-2.1194E-16"
+        iyy="4.6629E-08"
+        iyz="-3.9661E-14"
+        izz="2.0857E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/back_right_axis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.81961 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/back_right_axis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_axis_joint"
+    type="revolute">
+    <origin
+      xyz="-0.074929 -0.085 0.042531"
+      rpy="-1.5708 1.4699 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_right_axis" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-30"
+      upper="30"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_right_wheel">
+    <inertial>
+      <origin
+        xyz="0.000150077760935563 -9.0618027228595E-05 0.0074989635381281"
+        rpy="0 0 0" />
+      <mass
+        value="0.0280269334608379" />
+      <inertia
+        ixx="5.11707402761303E-06"
+        ixy="-2.45742070131501E-10"
+        ixz="4.0674884766407E-08"
+        iyy="5.1168154207667E-06"
+        iyz="-2.45597868218773E-08"
+        izz="9.18176870661576E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/back_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/back_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.02 0"
+      rpy="1.5707963267949 -0.543214184329357 0" />
+    <parent
+      link="back_right_axis" />
+    <child
+      link="back_right_wheel" />
+    <axis
+      xyz="-0.0100051880403523 0.00604120421717356 -0.999931697699339" />
+  </joint>
+  <link
+    name="back_left_axis">
+    <inertial>
+      <origin
+        xyz="-0.00018146 0.012858 9.7816E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.0027556" />
+      <inertia
+        ixx="2.102E-07"
+        ixy="-2.0278E-09"
+        ixz="-1.5293E-15"
+        iyy="4.6632E-08"
+        iyz="-3.8932E-14"
+        izz="2.0857E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/back_left_axis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.81961 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/back_left_axis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_axis_joint"
+    type="revolute">
+    <origin
+      xyz="0.064926 -0.085 0.039232"
+      rpy="1.5708 -1.5515 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_left_axis" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-30"
+      upper="30"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_left_wheel">
+    <inertial>
+      <origin
+        xyz="1.63226960582935E-05 -0.000185175114039732 0.0074988607287341"
+        rpy="0 0 0" />
+      <mass
+        value="0.028026933460838" />
+      <inertia
+        ixx="5.11667185422754E-06"
+        ixy="-5.46163119677596E-11"
+        ixz="4.42382398729364E-09"
+        iyy="5.1172866423531E-06"
+        iyz="-5.01866914884249E-08"
+        izz="9.18169965841486E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/back_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotModel3/meshes/back_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.02 0"
+      rpy="-1.5707963267949 1.48287621614252 -3.14159265358979" />
+    <parent
+      link="back_left_axis" />
+    <child
+      link="back_left_wheel" />
+    <axis
+      xyz="-0.00108817927846046 0.0123450023981657 -0.999923205442122" />
+  </joint>
+</robot>
